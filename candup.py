@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 import sys,pycanopen
 
+if len(sys.argv) < 3:
+    print "Usage:",sys.argv[0],"<input-interface> <output1> [output2] ... [outputX]"
+    sys.exit(-1)
+
 args=sys.argv;
 args.reverse() #reverse puts arg0 on the top
 args.pop() # Skip own name
