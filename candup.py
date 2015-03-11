@@ -19,6 +19,6 @@ for arg in args:
 
 while(True):
     frame = input.read_can_frame()
-    
+    print frame    
     for output in outputs:
         output.write_can_frame(frame)
