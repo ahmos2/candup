@@ -20,5 +20,8 @@ for arg in args:
 while(True):
     frame = input.read_can_frame()
     print frame    
-    for output in outputs:
-        output.write_can_frame(frame)
+    if frame:
+        for output in outputs:
+            output.write_can_frame(frame)
+    else:
+        print "No frame read"
